@@ -34,4 +34,9 @@ object wrapping {
       value: NonEmptyString
   )
 
+  @newtype
+  case class FileStatus(
+      value: NonEmptyString
+  )
+
 }

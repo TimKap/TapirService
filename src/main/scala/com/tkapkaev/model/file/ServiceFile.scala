@@ -7,6 +7,7 @@ case class ServiceFile(
     id: FileId,
     status: FileStatus,
     name: FileName,
+    kind: FileKind,
     localPath: Option[FilePath],
     link: Option[FileLink],
     size: FileSize,
