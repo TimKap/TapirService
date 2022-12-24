@@ -1,4 +1,4 @@
-package com.tkapkaev.model.order
+package com.tkapkaev.model.file
 
 import eu.timepit.refined.numeric.NonNegative
 import eu.timepit.refined.types.string.NonEmptyString
@@ -6,18 +6,7 @@ import io.estatico.newtype.macros.newtype
 
 import java.util.UUID
 
-object file {
-
-  case class ServiceFile(
-      id: FileId,
-      name: FileName,
-      path: FilePath,
-      size: FileSize,
-      extension: FileExtension,
-      content: Array[Byte],
-      metaInfo: MetaInfo
-  )
-
+object wrapping {
   @newtype
   case class FileId(value: UUID)
 
@@ -32,6 +21,16 @@ object file {
 
   @newtype
   case class FileExtension(
+      value: NonEmptyString
+  )
+
+  @newtype
+  case class FileLink(
+      value: NonEmptyString
+  )
+
+  @newtype
+  case class MD5(
       value: NonEmptyString
   )
 

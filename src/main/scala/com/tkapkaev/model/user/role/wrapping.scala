@@ -1,15 +1,11 @@
-package com.tkapkaev.model.user
+package com.tkapkaev.model.user.role
 
 import eu.timepit.refined.types.string.NonEmptyString
 import io.estatico.newtype.macros.newtype
 
 import java.util.UUID
 
-object role {
-  case class Role(
-      id: RoleId,
-      name: RoleName
-  )
+object wrapping {
 
   @newtype
   case class RoleId(

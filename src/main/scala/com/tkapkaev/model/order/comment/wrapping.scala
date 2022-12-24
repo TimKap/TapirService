@@ -1,18 +1,15 @@
-package com.tkapkaev.model.order
+package com.tkapkaev.model.order.comment
 
 import eu.timepit.refined.types.string.NonEmptyString
 import io.estatico.newtype.macros.newtype
 
 import java.util.UUID
 
-object comment {
-
-  case class Comment(
-      id: CommentId,
-      text: NonEmptyString,
-      metaInfo: MetaInfo
-  )
+object wrapping {
 
   @newtype
   case class CommentId(value: UUID)
+
+  @newtype
+  case class CommentContent(value: NonEmptyString)
 }

@@ -1,38 +1,35 @@
 package com.tkapkaev.model.order
 
-import eu.timepit.refined.types.string.NonEmptyString
-import eu.timepit.refined.auto._
-
 sealed trait OrderStatus {
-  def value: NonEmptyString
+  def value: String
 }
 
 case object NewStatus extends OrderStatus {
-  override def value: NonEmptyString = "New"
+  override def value: String = "New"
 }
 
 case object Processing extends OrderStatus {
-  override def value: NonEmptyString = "Processing"
+  override def value: String = "Processing"
 }
 
 case object WaitingForPayment extends OrderStatus {
-  override def value: NonEmptyString = "WaitingForPayment"
+  override def value: String = "WaitingForPayment"
 }
 
 case object Paid extends OrderStatus {
-  override def value: NonEmptyString = "Paid"
+  override def value: String = "Paid"
 }
 
 case object SentForDelivery extends OrderStatus {
-  override def value: NonEmptyString = "SentForDelivery"
+  override def value: String = "SentForDelivery"
 }
 
 case object DeliveryInProgress extends OrderStatus {
-  override def value: NonEmptyString = "DeliveryInProgress"
+  override def value: String = "DeliveryInProgress"
 }
 
 case object Delivered extends OrderStatus {
-  override def value: NonEmptyString = "Delivered"
+  override def value: String = "Delivered"
 }
 
-case class UnknownStatus(override val value: NonEmptyString) extends OrderStatus
+case class UnknownStatus(override val value: String) extends OrderStatus

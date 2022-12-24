@@ -1,7 +1,6 @@
-package com.tkapkaev.model
-package order
+package com.tkapkaev.model.order.metainfo
 
-import com.tkapkaev.model.user.user.Login
+import com.tkapkaev.model.user.wrapping.Login
 
 import java.time.Instant
 

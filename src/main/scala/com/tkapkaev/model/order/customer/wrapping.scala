@@ -1,16 +1,11 @@
-package com.tkapkaev.model.order
+package com.tkapkaev.model.order.customer
 
 import eu.timepit.refined.types.string.NonEmptyString
 import io.estatico.newtype.macros.newtype
 
 import java.util.UUID
 
-object customer {
-
-  case class Customer(
-      id: CustomerId,
-      name: CustomerName
-  )
+object wrapping {
 
   @newtype
   case class CustomerId(
@@ -19,4 +14,5 @@ object customer {
 
   @newtype
   case class CustomerName(value: NonEmptyString)
+
 }
