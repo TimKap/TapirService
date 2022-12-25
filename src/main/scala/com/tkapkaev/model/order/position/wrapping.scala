@@ -1,8 +1,8 @@
 package com.tkapkaev.model.order.position
 
-import io.estatico.newtype.macros.newtype
-
 import java.util.UUID
+
+import io.estatico.newtype.macros.newtype
 
 object wrapping {
   @newtype

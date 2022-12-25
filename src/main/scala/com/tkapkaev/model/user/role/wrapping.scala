@@ -1,19 +1,23 @@
 package com.tkapkaev.model.user.role
 
-import eu.timepit.refined.types.string.NonEmptyString
-import io.estatico.newtype.macros.newtype
+import com.tkapkaev.derevo._
+import derevo.derive
 
 import java.util.UUID
-
+import eu.timepit.refined.types.string.NonEmptyString
+import io.estatico.newtype.macros.newtype
+import io.circe.refined._
 object wrapping {
 
+  @derive(jsonEncoder, jsonDecoder)
   @newtype
-  case class RoleId(
+  case class AttributeId(
       value: UUID
   )
 
+  @derive(jsonEncoder, jsonDecoder)
   @newtype
-  case class RoleName(
+  case class AttributeName(
       value: NonEmptyString
   )
 

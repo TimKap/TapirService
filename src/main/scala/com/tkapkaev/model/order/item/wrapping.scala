@@ -1,10 +1,10 @@
 package com.tkapkaev.model.order.item
 
+import java.util.UUID
+
 import eu.timepit.refined.types.string.NonEmptyString
 import io.circe.Json
 import io.estatico.newtype.macros.newtype
-
-import java.util.UUID
 
 object wrapping {
   @newtype

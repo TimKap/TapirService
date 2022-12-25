@@ -1,4 +1,8 @@
 package com.tkapkaev
+import java.time.Instant
+
+import scala.concurrent.duration.DurationInt
+
 import cats.effect.kernel.Resource
 import cats.effect.{ExitCode, IO, IOApp}
 import cats.syntax.either._
@@ -9,15 +13,13 @@ import com.tkapkaev.service.EmailService
 import cron4s.Cron
 import emil.{MailConfig, SSLType}
 import eu.timepit.fs2cron.cron4s.Cron4sScheduler
+import eu.timepit.refined.auto._
 import fs2.Stream
 import org.http4s.HttpApp
 import org.http4s.ember.server.EmberServerBuilder
 import org.http4s.server.Server
 import pureconfig.module.catseffect._
 import sttp.tapir.server.http4s.Http4sServerInterpreter
-import eu.timepit.refined.auto._
-import java.time.Instant
-import scala.concurrent.duration.DurationInt
 
 object Main extends IOApp {
 

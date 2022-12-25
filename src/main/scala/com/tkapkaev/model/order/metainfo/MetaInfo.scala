@@ -1,8 +1,8 @@
 package com.tkapkaev.model.order.metainfo
 
-import com.tkapkaev.model.user.wrapping.Login
-
 import java.time.Instant
+
+import com.tkapkaev.model.user.wrapping.Login
 
 case class MetaInfo(
     creator: Login,
